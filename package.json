@@ -1,0 +1,19 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "This project was created to practice my knowledge about React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KovDimaY/Quiz-React.git"
+  },
+  "author": "Dmytro Kovalenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KovDimaY/Quiz-React/issues"
+  },
+  "homepage": "https://github.com/KovDimaY/Quiz-React#readme"
+}
