@@ -11,6 +11,9 @@ import routes from './routes';
 // Reducers import
 import reducers from './reducers/index.js';
 
+// Style import
+import '../styles/index.scss';
+
 // Store definition with Middleware applying and Rendering of React DOM
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
