@@ -1,5 +1,5 @@
 .app {
-  color: red;
+  @import 'header';
   @import 'main-page';
   @import 'about-page';
 }

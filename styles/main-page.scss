@@ -1,3 +1,4 @@
 .main-page {
-  color: blue;
+  @import './main/activity-log.scss';
+  @import './main/question-info.scss';
 }
