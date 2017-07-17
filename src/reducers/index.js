@@ -1,9 +1,13 @@
 // Node modules import
 import { combineReducers } from 'redux';
 
+// Reducers import
+import questionsReducer from './questions';
+
+
 // Stage holding in combine reducers
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  questions: questionsReducer
 });
 
 export default rootReducer;
