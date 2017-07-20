@@ -9,10 +9,15 @@ export function fetchQuestion() {
   return function(dispatch) {
     return axios.get('http://jservice.io/api/random')
       .then(function(response) {
-        console.log("hello from action");
         dispatch({
           type: FETCH_QUESTION,
-          payload: "Hello world, this is payload"
+          payload: {
+            id: response.data[0].id,
+            category: response.data[0].category,
+            question: response.data[0].question,
+            answer: response.data[0].answer,
+            value: response.data[0].value            
+          }
         })
       })
   }

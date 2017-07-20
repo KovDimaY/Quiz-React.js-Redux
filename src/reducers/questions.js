@@ -9,7 +9,6 @@ const INITIAL_STATE = {
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
     case FETCH_QUESTION:
-      console.log(action.payload)
       return { ...state, question: action.payload}
     default:
         return state;
