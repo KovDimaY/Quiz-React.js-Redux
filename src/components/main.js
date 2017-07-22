@@ -7,6 +7,7 @@ import { fetchQuestion } from '../actions/questions';
 // Components import
 import ActivityLog from './main/activity-log.js'
 import QuestionInfo from './main/question-info.js'
+import Loader from './main/loader.js'
 
 // Main page
 class MainPage extends Component {
@@ -20,10 +21,12 @@ class MainPage extends Component {
       <div className='container'>
         <div className='main-page'>
           <ActivityLog />
-          {this.props.question && (
+          {this.props.question ? (
               <QuestionInfo
                 question={this.props.question}/>
-          )}
+            ) :
+              <Loader />
+          }
         </div>
       </div>
     )
