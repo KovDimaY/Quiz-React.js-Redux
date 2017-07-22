@@ -9,6 +9,8 @@ import ActivityLog from './main/activity-log.js'
 import QuestionInfo from './main/question-info.js'
 import Loader from './main/loader.js'
 import SkipQuestion from './main/skip-question.js'
+import AnswerBuilder from './main/answer-builder.js'
+import AnswerResult from './main/answer-result.js'
 
 // Main page
 class MainPage extends Component {
@@ -23,11 +25,13 @@ class MainPage extends Component {
         <div className='main-page'>
           <ActivityLog totalCount={this.props.totalCount}/>
           {this.props.question ? (
-              <div>
+              <div className='container'>
                 <QuestionInfo question={this.props.question}/>
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
+                <AnswerBuilder />
+                <AnswerResult />
               </div>
             ) :
               <Loader />
