@@ -30,7 +30,7 @@ class MainPage extends Component {
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
-                <AnswerBuilder />
+                <AnswerBuilder characters={this.props.arrayInProposition}/>
                 <AnswerResult />
               </div>
             ) :
@@ -45,7 +45,8 @@ class MainPage extends Component {
 function mapStateToProps(state) {
   return {
     question: state.questions.question,
-    totalCount: state.questions.totalCount
+    totalCount: state.questions.totalCount,
+    arrayInProposition: state.questions.arrayInProposition
   }
 }
 
