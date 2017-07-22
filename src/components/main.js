@@ -2,7 +2,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchQuestion, incrementTotalCount } from '../actions/questions';
+import {
+  fetchQuestion,
+  incrementTotalCount,
+  relocateToBoard
+} from '../actions/questions';
 
 // Components import
 import ActivityLog from './main/activity-log.js'
@@ -19,7 +23,6 @@ class MainPage extends Component {
   }
 
   render() {
-    console.log(`this is transformed state: `, this.props.question);
     return (
       <div className='container'>
         <div className='main-page'>
@@ -30,8 +33,11 @@ class MainPage extends Component {
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
-                <AnswerBuilder characters={this.props.arrayInProposition}/>
                 <AnswerResult />
+                <AnswerBuilder
+                  characters={this.props.charsInProposition}
+                  relocateToBoard={this.props.relocateToBoard}/>
+
               </div>
             ) :
               <Loader />
@@ -46,8 +52,15 @@ function mapStateToProps(state) {
   return {
     question: state.questions.question,
     totalCount: state.questions.totalCount,
-    arrayInProposition: state.questions.arrayInProposition
+    charsInProposition: state.questions.charsInProposition
   }
 }
 
-export default connect(mapStateToProps, { fetchQuestion, incrementTotalCount })(MainPage)
+export default connect(
+  mapStateToProps,
+  {
+    fetchQuestion,
+    incrementTotalCount,
+    relocateToBoard
+  }
+)(MainPage)

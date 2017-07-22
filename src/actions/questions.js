@@ -2,7 +2,11 @@
 import axios from 'axios';
 
 // Actions types import
-import { FETCH_QUESTION, INCREMENT_TOTAL_COUNT } from '../constants/questions.js';
+import {
+  FETCH_QUESTION,
+  INCREMENT_TOTAL_COUNT,
+  RELOCATE_FROM_PROPOSITION_TO_BOARD
+ } from '../constants/questions.js';
 
 // Finctions import
 import { stringToArray } from '../helpers/functions.js'
@@ -32,6 +36,16 @@ export function incrementTotalCount() {
   return function(dispatch) {
     dispatch({
       type: INCREMENT_TOTAL_COUNT
+    })
+  }
+}
+
+// Relocates character from  "charsInProposition" to "charsOnBoard"
+export function relocateToBoard(char) {
+  return function(dispatch) {
+    dispatch({
+      type: RELOCATE_FROM_PROPOSITION_TO_BOARD,
+      payload: char
     })
   }
 }

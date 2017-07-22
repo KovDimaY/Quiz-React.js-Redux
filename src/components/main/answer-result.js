@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 export default class AnswerResult extends Component {
   render() {
     return (
-      <div className='answer-builder'>
+      <div className='answer-result'>
         <div className='answer-container'>
           <div className='characters-place'>
             <ul className='inline-list'>
