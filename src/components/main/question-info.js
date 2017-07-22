@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 // This component will show question to the user
 export default class QuestionInfo extends Component {
   render() {
-    console.log('props from question info: ', this.props)
     const {
       id,
       question,

@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 // This component will show data about user activity
 export default class ActivityLog extends Component {
   render() {
-    console.log('ActivityLog props: ', this.props)
     return (
       <div className='activity-log'>
         <div className='container'>

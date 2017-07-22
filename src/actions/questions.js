@@ -5,7 +5,8 @@ import axios from 'axios';
 import {
   FETCH_QUESTION,
   INCREMENT_TOTAL_COUNT,
-  RELOCATE_FROM_PROPOSITION_TO_BOARD
+  RELOCATE_FROM_PROPOSITION_TO_BOARD,
+  RELOCATE_FROM_BOARD_TO_PROPOSITION
  } from '../constants/questions.js';
 
 // Finctions import
@@ -45,6 +46,16 @@ export function relocateToBoard(char) {
   return function(dispatch) {
     dispatch({
       type: RELOCATE_FROM_PROPOSITION_TO_BOARD,
+      payload: char
+    })
+  }
+}
+
+// Relocates character from  "charsOnBoard" to "charsInProposition"
+export function relocateToProposition(char) {
+  return function(dispatch) {
+    dispatch({
+      type: RELOCATE_FROM_BOARD_TO_PROPOSITION,
       payload: char
     })
   }

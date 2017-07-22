@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import {
   fetchQuestion,
   incrementTotalCount,
-  relocateToBoard
+  relocateToBoard,
+  relocateToProposition
 } from '../actions/questions';
 
 // Components import
@@ -33,7 +34,9 @@ class MainPage extends Component {
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
-                <AnswerResult />
+                <AnswerResult
+                  characters={this.props.charsOnBoard}
+                  relocateToProposition={this.props.relocateToProposition}/>
                 <AnswerBuilder
                   characters={this.props.charsInProposition}
                   relocateToBoard={this.props.relocateToBoard}/>
@@ -52,7 +55,8 @@ function mapStateToProps(state) {
   return {
     question: state.questions.question,
     totalCount: state.questions.totalCount,
-    charsInProposition: state.questions.charsInProposition
+    charsInProposition: state.questions.charsInProposition,
+    charsOnBoard: state.questions.charsOnBoard,
   }
 }
 
@@ -61,6 +65,7 @@ export default connect(
   {
     fetchQuestion,
     incrementTotalCount,
-    relocateToBoard
+    relocateToBoard,
+    relocateToProposition
   }
 )(MainPage)
