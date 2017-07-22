@@ -2,12 +2,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchQuestion } from '../actions/questions';
+import { fetchQuestion, incrementTotalCount } from '../actions/questions';
 
 // Components import
 import ActivityLog from './main/activity-log.js'
 import QuestionInfo from './main/question-info.js'
 import Loader from './main/loader.js'
+import SkipQuestion from './main/skip-question.js'
 
 // Main page
 class MainPage extends Component {
@@ -20,10 +21,14 @@ class MainPage extends Component {
     return (
       <div className='container'>
         <div className='main-page'>
-          <ActivityLog />
+          <ActivityLog totalCount={this.props.totalCount}/>
           {this.props.question ? (
-              <QuestionInfo
-                question={this.props.question}/>
+              <div>
+                <QuestionInfo question={this.props.question}/>
+                <SkipQuestion
+                  fetchQuestion={this.props.fetchQuestion}
+                  incrementTotalCount={this.props.incrementTotalCount}/>
+              </div>
             ) :
               <Loader />
           }
@@ -35,8 +40,9 @@ class MainPage extends Component {
 
 function mapStateToProps(state) {
   return {
-    question: state.questions.question
+    question: state.questions.question,
+    totalCount: state.questions.totalCount
   }
 }
 
-export default connect(mapStateToProps, { fetchQuestion })(MainPage)
+export default connect(mapStateToProps, { fetchQuestion, incrementTotalCount })(MainPage)

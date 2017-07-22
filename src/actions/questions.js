@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Actions types import
-import { FETCH_QUESTION } from '../constants/questions.js';
+import { FETCH_QUESTION, INCREMENT_TOTAL_COUNT } from '../constants/questions.js';
 
 // Receives a random question
 export function fetchQuestion() {
@@ -16,9 +16,18 @@ export function fetchQuestion() {
             category: response.data[0].category,
             question: response.data[0].question,
             answer: response.data[0].answer,
-            value: response.data[0].value            
+            value: response.data[0].value
           }
         })
       })
+  }
+}
+
+// Increments the total questions count
+export function incrementTotalCount() {
+  return function(dispatch) {
+    dispatch({
+      type: INCREMENT_TOTAL_COUNT
+    })
   }
 }

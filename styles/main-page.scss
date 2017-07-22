@@ -1,4 +1,5 @@
 .main-page {
+  @import './main/skip-question.scss';
   @import './main/loader.scss';
   @import './main/activity-log.scss';
   @import './main/question-info.scss';

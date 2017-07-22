@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // This component will show data about user activity
 export default class ActivityLog extends Component {
   render() {
+    console.log('ActivityLog props: ', this.props)
     return (
       <div className='activity-log'>
         <div className='container'>
@@ -15,7 +16,7 @@ export default class ActivityLog extends Component {
             </div>
             <div className='col-md-6'>
               <div className='total-questions'>
-                Total Answers: 0
+                Total Answers: {this.props.totalCount}
               </div>
             </div>
           </div>

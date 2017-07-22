@@ -1,0 +1,9 @@
+.skip-question {
+  color: red;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: gray;
+  }
+}
