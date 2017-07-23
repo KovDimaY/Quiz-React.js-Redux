@@ -9,3 +9,17 @@ export function stringToArray(string) {
   }
   return result;
 }
+
+// Shuffles given array randomly
+export function shuffleArray(array) {
+  for (let i = 0; i < 2 * array.length; i++) {
+    const index1 = Math.floor(Math.random() * array.length);
+    const index2 = Math.floor(Math.random() * array.length);
+    if (index1 !== index2) {
+      const temp = array[index1];
+      array[index1] = array[index2];
+      array[index2] = temp;
+    }
+  }
+  return array;
+}
