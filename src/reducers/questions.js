@@ -2,6 +2,7 @@
 import {
   FETCH_QUESTION,
   INCREMENT_TOTAL_COUNT,
+  INCREMENT_CORRECT_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
   RELOCATE_FROM_BOARD_TO_PROPOSITION,
   CHECK_ANSWER
@@ -14,6 +15,7 @@ import { arrayToString } from '../helpers/functions'
 const INITIAL_STATE = {
   question: null,
   totalCount: 0,
+  correctCount: 0,
   charsInProposition: [],
   charsOnBoard: [],
   checkAnswerCondition: null
@@ -25,11 +27,15 @@ export default function(state = INITIAL_STATE, action) {
       return { ...state,
         question: action.payload,
         charsInProposition: action.payload.transformedAnswer,
-        charsOnBoard: []
+        charsOnBoard: [],
+        checkAnswerCondition: null
       }
 
     case INCREMENT_TOTAL_COUNT:
       return { ...state, totalCount: state.totalCount + 1}
+
+    case INCREMENT_CORRECT_COUNT:
+      return { ...state, correctCount: state.correctCount + 1}
 
     case RELOCATE_FROM_PROPOSITION_TO_BOARD:
       const filteredCharsInProposition = state.charsInProposition.filter(

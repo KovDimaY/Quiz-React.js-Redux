@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import {
   fetchQuestion,
   incrementTotalCount,
+  incrementCorrectCount,
   relocateToBoard,
   relocateToProposition,
   checkAnswer
@@ -18,6 +19,7 @@ import SkipQuestion from './main/skip-question.js'
 import AnswerBuilder from './main/answer-builder.js'
 import AnswerResult from './main/answer-result.js'
 import ContinueQuiz from './main/continue-quiz.js'
+import ProgressMessage from './main/progress-message.js'
 
 // Main page
 class MainPage extends Component {
@@ -29,7 +31,9 @@ class MainPage extends Component {
     return (
       <div className='container'>
         <div className='main-page'>
-          <ActivityLog totalCount={this.props.totalCount}/>
+          <ActivityLog
+            totalCount={this.props.totalCount}
+            correctCount={this.props.correctCount}/>
           {this.props.question ? (
               <div className='container'>
                 <QuestionInfo question={this.props.question}/>
@@ -37,6 +41,8 @@ class MainPage extends Component {
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
+
+                <ProgressMessage answerCondition={this.props.answerCondition}/>
 
                 <AnswerResult
                   characters={this.props.charsOnBoard}
@@ -49,7 +55,11 @@ class MainPage extends Component {
                     relocateToBoard={this.props.relocateToBoard}
                     checkAnswer={this.props.checkAnswer}/>
                 ) : (
-                  <ContinueQuiz answerCondition={this.props.answerCondition}/>
+                  <ContinueQuiz
+                    answerCondition={this.props.answerCondition}
+                    fetchQuestion={this.props.fetchQuestion}
+                    incrementTotalCount={this.props.incrementTotalCount}
+                    incrementCorrectCount={this.props.incrementCorrectCount}/>
                 )}
               </div>
             ) :
@@ -65,6 +75,7 @@ function mapStateToProps(state) {
   return {
     question: state.questions.question,
     totalCount: state.questions.totalCount,
+    correctCount: state.questions.correctCount,
     charsInProposition: state.questions.charsInProposition,
     charsOnBoard: state.questions.charsOnBoard,
     answerCondition: state.questions.checkAnswerCondition
@@ -76,6 +87,7 @@ export default connect(
   {
     fetchQuestion,
     incrementTotalCount,
+    incrementCorrectCount,
     relocateToBoard,
     relocateToProposition,
     checkAnswer

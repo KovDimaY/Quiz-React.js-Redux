@@ -5,6 +5,7 @@ import axios from 'axios';
 import {
   FETCH_QUESTION,
   INCREMENT_TOTAL_COUNT,
+  INCREMENT_CORRECT_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
   RELOCATE_FROM_BOARD_TO_PROPOSITION,
   CHECK_ANSWER
@@ -42,6 +43,15 @@ export function incrementTotalCount() {
   return function(dispatch) {
     dispatch({
       type: INCREMENT_TOTAL_COUNT
+    })
+  }
+}
+
+// Increments the correct questions count
+export function incrementCorrectCount() {
+  return function(dispatch) {
+    dispatch({
+      type: INCREMENT_CORRECT_COUNT
     })
   }
 }

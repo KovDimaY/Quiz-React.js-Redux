@@ -1,0 +1,15 @@
+.progress-message {
+  text-transform: uppercase;
+
+  .success-message {
+    color: lime;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .failure-message {
+    color: red;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
