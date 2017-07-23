@@ -8,7 +8,8 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
   }
-  
+
+  @import './main/continue-quiz.scss';
   @import './main/answer.scss';
   @import './main/skip-question.scss';
   @import './main/loader.scss';

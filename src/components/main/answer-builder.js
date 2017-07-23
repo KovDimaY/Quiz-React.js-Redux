@@ -23,11 +23,9 @@ export default class AnswerBuilder extends Component {
     return (
       <div className='answer-builder'>
         <div className='answer-container'>
-          <div className='characters-place'>
             <ul className='inline-list'>
               {this.showCharacters(this.props.characters)}
             </ul>
-          </div>
         </div>
       </div>
     )

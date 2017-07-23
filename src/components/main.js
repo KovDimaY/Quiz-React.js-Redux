@@ -16,6 +16,7 @@ import Loader from './main/loader.js'
 import SkipQuestion from './main/skip-question.js'
 import AnswerBuilder from './main/answer-builder.js'
 import AnswerResult from './main/answer-result.js'
+import ContinueQuiz from './main/continue-quiz.js'
 
 // Main page
 class MainPage extends Component {
@@ -45,6 +46,7 @@ class MainPage extends Component {
             ) :
               <Loader />
           }
+          <ContinueQuiz />
         </div>
       </div>
     )
