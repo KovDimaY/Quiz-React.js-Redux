@@ -3,15 +3,20 @@ import {
   FETCH_QUESTION,
   INCREMENT_TOTAL_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
-  RELOCATE_FROM_BOARD_TO_PROPOSITION
+  RELOCATE_FROM_BOARD_TO_PROPOSITION,
+  CHECK_ANSWER
  } from '../constants/questions.js';
+
+// Functions import
+import { arrayToString } from '../helpers/functions'
 
 // Initial states for reducers
 const INITIAL_STATE = {
   question: null,
   totalCount: 0,
   charsInProposition: [],
-  charsOnBoard: []
+  charsOnBoard: [],
+  checkAnswerCondition: null
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -39,6 +44,16 @@ export default function(state = INITIAL_STATE, action) {
       return { ...state,
         charsInProposition: [...state.charsInProposition, action.payload],
         charsOnBoard: filteredCharsOnBoard
+      }
+    case CHECK_ANSWER:
+      let result = null;
+      const userAnswer = arrayToString(state.charsOnBoard);
+      const correctAnswer = state.question.answer;
+      if (userAnswer.length === correctAnswer.length) {
+        result = userAnswer === correctAnswer;
+      }
+      return { ...state,
+        checkAnswerCondition: result
       }
     default:
         return state;

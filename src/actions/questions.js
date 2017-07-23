@@ -6,10 +6,11 @@ import {
   FETCH_QUESTION,
   INCREMENT_TOTAL_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
-  RELOCATE_FROM_BOARD_TO_PROPOSITION
+  RELOCATE_FROM_BOARD_TO_PROPOSITION,
+  CHECK_ANSWER
  } from '../constants/questions.js';
 
-// Finctions import
+// Functions import
 import { stringToArray, shuffleArray } from '../helpers/functions.js'
 
 // Receives a random question
@@ -17,7 +18,7 @@ export function fetchQuestion() {
   return function(dispatch) {
     return axios.get('http://jservice.io/api/random')
       .then(function(response) {
-        console.log(response.data[0].answer) 
+        console.log(response.data[0].answer)
         const arrayOfCharacters = stringToArray(response.data[0].answer);
         const shuffledArray = shuffleArray(arrayOfCharacters);
         const data = {
@@ -60,6 +61,16 @@ export function relocateToProposition(char) {
   return function(dispatch) {
     dispatch({
       type: RELOCATE_FROM_BOARD_TO_PROPOSITION,
+      payload: char
+    })
+  }
+}
+
+// Checks if the answer provided by user is correct
+export function checkAnswer(char) {
+  return function(dispatch) {
+    dispatch({
+      type: CHECK_ANSWER,
       payload: char
     })
   }

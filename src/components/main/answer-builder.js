@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 export default class AnswerBuilder extends Component {
   moveCharacter(char) {
     this.props.relocateToBoard(char);
+    this.props.checkAnswer();
   }
 
   showCharacters(array) {

@@ -6,7 +6,8 @@ import {
   fetchQuestion,
   incrementTotalCount,
   relocateToBoard,
-  relocateToProposition
+  relocateToProposition,
+  checkAnswer
 } from '../actions/questions';
 
 // Components import
@@ -40,7 +41,8 @@ class MainPage extends Component {
                   relocateToProposition={this.props.relocateToProposition}/>
                 <AnswerBuilder
                   characters={this.props.charsInProposition}
-                  relocateToBoard={this.props.relocateToBoard}/>
+                  relocateToBoard={this.props.relocateToBoard}
+                  checkAnswer={this.props.checkAnswer}/>
 
               </div>
             ) :
@@ -68,6 +70,7 @@ export default connect(
     fetchQuestion,
     incrementTotalCount,
     relocateToBoard,
-    relocateToProposition
+    relocateToProposition,
+    checkAnswer
   }
 )(MainPage)
