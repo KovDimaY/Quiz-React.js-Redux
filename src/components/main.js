@@ -33,22 +33,28 @@ class MainPage extends Component {
           {this.props.question ? (
               <div className='container'>
                 <QuestionInfo question={this.props.question}/>
+
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
+
                 <AnswerResult
                   characters={this.props.charsOnBoard}
-                  relocateToProposition={this.props.relocateToProposition}/>
-                <AnswerBuilder
-                  characters={this.props.charsInProposition}
-                  relocateToBoard={this.props.relocateToBoard}
-                  checkAnswer={this.props.checkAnswer}/>
+                  relocateToProposition={this.props.relocateToProposition}
+                  answerCondition={this.props.answerCondition}/>
 
+                {this.props.answerCondition === null ? (
+                  <AnswerBuilder
+                    characters={this.props.charsInProposition}
+                    relocateToBoard={this.props.relocateToBoard}
+                    checkAnswer={this.props.checkAnswer}/>
+                ) : (
+                  <ContinueQuiz answerCondition={this.props.answerCondition}/>
+                )}
               </div>
             ) :
               <Loader />
           }
-          <ContinueQuiz />
         </div>
       </div>
     )
@@ -61,6 +67,7 @@ function mapStateToProps(state) {
     totalCount: state.questions.totalCount,
     charsInProposition: state.questions.charsInProposition,
     charsOnBoard: state.questions.charsOnBoard,
+    answerCondition: state.questions.checkAnswerCondition
   }
 }
 

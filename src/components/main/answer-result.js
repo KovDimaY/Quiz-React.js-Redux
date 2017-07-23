@@ -19,10 +19,20 @@ export default class AnswerResult extends Component {
     )
   }
 
+  giveClassBasedOnResult() {
+    if (this.props.answerCondition === true) {
+      return 'success-answer';
+    }
+    if (this.props.answerCondition === false) {
+      return 'failure-answer';
+    }
+    return ''
+  }
+
   render() {
     return (
       <div className='answer-result'>
-        <div className='answer-container'>
+        <div className={`answer-container ${this.giveClassBasedOnResult()}`}>
           <div className='characters-place'>
             <ul className='inline-list'>
               {this.showCharacters(this.props.characters)}

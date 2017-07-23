@@ -27,8 +27,10 @@ export default function(state = INITIAL_STATE, action) {
         charsInProposition: action.payload.transformedAnswer,
         charsOnBoard: []
       }
+
     case INCREMENT_TOTAL_COUNT:
       return { ...state, totalCount: state.totalCount + 1}
+
     case RELOCATE_FROM_PROPOSITION_TO_BOARD:
       const filteredCharsInProposition = state.charsInProposition.filter(
         item => item !== action.payload
@@ -37,14 +39,17 @@ export default function(state = INITIAL_STATE, action) {
         charsOnBoard: [...state.charsOnBoard, action.payload],
         charsInProposition: filteredCharsInProposition
       }
+
     case RELOCATE_FROM_BOARD_TO_PROPOSITION:
       const filteredCharsOnBoard = state.charsOnBoard.filter(
         item => item !== action.payload
       );
       return { ...state,
         charsInProposition: [...state.charsInProposition, action.payload],
-        charsOnBoard: filteredCharsOnBoard
+        charsOnBoard: filteredCharsOnBoard,
+        checkAnswerCondition: null
       }
+
     case CHECK_ANSWER:
       let result = null;
       const userAnswer = arrayToString(state.charsOnBoard);
@@ -55,6 +60,7 @@ export default function(state = INITIAL_STATE, action) {
       return { ...state,
         checkAnswerCondition: result
       }
+
     default:
         return state;
   }
