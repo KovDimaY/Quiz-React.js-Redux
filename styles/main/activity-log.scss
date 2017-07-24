@@ -1,10 +1,16 @@
 .activity-log {
   padding: 1rem;
   font-size: 2rem;
+  margin-top: 30px;
+  color: dimgrey;
 
-  .correct-answers {}
+  .correct-answers {
+    float: left;
+    padding-left: 20px;
+  }
 
   .total-questions {
-    text-align: right;
+    float: right;
+    padding-right: 20px;
   }
 }

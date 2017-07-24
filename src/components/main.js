@@ -29,13 +29,12 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <div className='main-page'>
+      <div className='main-page'>
           <ActivityLog
             totalCount={this.props.totalCount}
             correctCount={this.props.correctCount}/>
           {this.props.question ? (
-              <div className='container'>
+              <div className='body-question'>
                 <QuestionInfo question={this.props.question}/>
 
                 <SkipQuestion
@@ -65,7 +64,6 @@ class MainPage extends Component {
             ) :
               <Loader />
           }
-        </div>
       </div>
     )
   }
