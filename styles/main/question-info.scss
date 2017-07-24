@@ -1,14 +1,29 @@
 .question-info {
+  text-align: center;
+  color: dimgrey;
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  border-radius: 2px;
+  background-color: blanchedalmond;
+  box-shadow: 5px 1px 15px #888888;
+
   .title {
-    color: red;
+    color: dimgrey;
   }
 
   .category {
-    color: yellow;
+    color: dimgrey;
   }
 
   .description {
-    color: lime;
+    color: dimgrey;
+    margin: 0 auto;
+    width: 95%;
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    border-radius: 2px;
+    padding: 30px;
+    font-size: 2rem;
+    background-color: ivory;
   }
 
 }
