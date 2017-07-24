@@ -4,6 +4,7 @@ import axios from 'axios';
 // Actions types import
 import {
   FETCH_QUESTION,
+  DELETE_CURRENT_QUESTION,
   INCREMENT_TOTAL_COUNT,
   INCREMENT_CORRECT_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
@@ -35,6 +36,15 @@ export function fetchQuestion() {
           payload: data
         })
       })
+  }
+}
+
+// Delete current question (to see the loader)
+export function removeQuestion() {
+  return function(dispatch) {
+    dispatch({
+      type: DELETE_CURRENT_QUESTION
+    })
   }
 }
 

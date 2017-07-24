@@ -9,6 +9,8 @@
                                     supported by Chrome and Opera */
   }
 
+  min-height: 700px;
+
   @import './main/progress-message.scss';
   @import './main/continue-quiz.scss';
   @import './main/answer.scss';

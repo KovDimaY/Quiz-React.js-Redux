@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import {
   fetchQuestion,
+  removeQuestion,
   incrementTotalCount,
   incrementCorrectCount,
   relocateToBoard,
@@ -19,7 +20,6 @@ import SkipQuestion from './main/skip-question.js'
 import AnswerBuilder from './main/answer-builder.js'
 import AnswerResult from './main/answer-result.js'
 import ContinueQuiz from './main/continue-quiz.js'
-import ProgressMessage from './main/progress-message.js'
 
 // Main page
 class MainPage extends Component {
@@ -39,9 +39,8 @@ class MainPage extends Component {
 
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
+                  removeQuestion={this.props.removeQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}/>
-
-                <ProgressMessage answerCondition={this.props.answerCondition}/>
 
                 <AnswerResult
                   characters={this.props.charsOnBoard}
@@ -84,6 +83,7 @@ export default connect(
   mapStateToProps,
   {
     fetchQuestion,
+    removeQuestion,
     incrementTotalCount,
     incrementCorrectCount,
     relocateToBoard,

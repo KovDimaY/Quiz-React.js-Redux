@@ -1,6 +1,9 @@
 // Node modules import
 import React, { Component } from 'react';
 
+// Components import
+import ProgressMessage from './progress-message.js'
+
 // This component will show data about user activity
 export default class AnswerResult extends Component {
   moveCharacter(char) {
@@ -32,6 +35,8 @@ export default class AnswerResult extends Component {
   render() {
     return (
       <div className='answer-result'>
+        <ProgressMessage answerCondition={this.props.answerCondition}/>
+
         <div className={`answer-container ${this.giveClassBasedOnResult()}`}>
           <div className='characters-place'>
             <ul className='inline-list'>

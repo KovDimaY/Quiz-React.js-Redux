@@ -1,6 +1,7 @@
 // Actions types import
 import {
   FETCH_QUESTION,
+  DELETE_CURRENT_QUESTION,
   INCREMENT_TOTAL_COUNT,
   INCREMENT_CORRECT_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
@@ -30,6 +31,9 @@ export default function(state = INITIAL_STATE, action) {
         charsOnBoard: [],
         checkAnswerCondition: null
       }
+
+    case DELETE_CURRENT_QUESTION:
+      return { ...state, question: null}
 
     case INCREMENT_TOTAL_COUNT:
       return { ...state, totalCount: state.totalCount + 1}
