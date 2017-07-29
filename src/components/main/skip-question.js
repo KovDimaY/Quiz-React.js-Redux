@@ -10,10 +10,14 @@ export default class SkipQuestion extends Component {
   }
 
   render() {
-    return (
-      <div className='skip-question noselect' onClick={this.receiveNextQuestion.bind(this)}>
-        Skip this question
-      </div>
-    )
+    if (this.props.answerCondition !== true) {
+      return (
+        <div className='skip-question noselect' onClick={this.receiveNextQuestion.bind(this)}>
+          Skip this question
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 }

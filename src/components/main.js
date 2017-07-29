@@ -40,7 +40,8 @@ class MainPage extends Component {
                 <SkipQuestion
                   fetchQuestion={this.props.fetchQuestion}
                   removeQuestion={this.props.removeQuestion}
-                  incrementTotalCount={this.props.incrementTotalCount}/>
+                  incrementTotalCount={this.props.incrementTotalCount}
+                  answerCondition={this.props.answerCondition}/>
 
                 <AnswerResult
                   characters={this.props.charsOnBoard}

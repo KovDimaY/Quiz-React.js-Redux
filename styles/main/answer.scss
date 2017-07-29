@@ -16,15 +16,15 @@
 
 .answer-container {
   margin: 0 auto;
-  padding-top: 10px;
-  background-color: #F6F6F6;
+  padding: 15px;
+  background-color: #f9f9f9;
   max-width: 676px;
   text-align: center;
   border: 1px solid rgba(128, 128, 128, 0.18);
   border-radius: 2px;
 
   .characters-place {
-    padding: 7rem 0;
+    padding: 5rem 0;
   }
   .character {
     width: 40px;
@@ -42,23 +42,32 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #66c3f9;
-      color: rgb(1, 1, 1);
+      background-color: #72c4f3;
     }
 
   }
   .space-as-character {
     margin: -1.2rem 0.4rem;
     width: 80px;
+    margin-top: 10px;
   }
   .success-character {
     background-color: rgb(146, 243, 102);
-    color: #1a6608
-  }
+    color: #1a6608;
 
+    &:hover {
+      background-color: rgb(146, 243, 102);
+      color: #1a6608;
+    }
+  }
   .failure-character {
     background-color: #e60000;
     color: #FFFFFF;
+
+    &:hover {
+      background-color: #e60000;
+      color: #FFFFFF;
+    }
   }
 }
 

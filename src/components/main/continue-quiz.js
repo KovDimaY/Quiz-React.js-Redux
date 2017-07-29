@@ -14,7 +14,7 @@ export default class ContinueQuiz extends Component {
       <div>
         {this.props.answerCondition === true && (
           <div onClick={this.nextQuestion.bind(this)}
-            className='next-question'>
+            className='next-question noselect'>
             Next Question
           </div>
         )}
