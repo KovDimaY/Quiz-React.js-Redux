@@ -2,6 +2,10 @@
   display: inline-block;
 }
 
+.inline-list {
+  padding: 0;
+}
+
 .answer-building {
   margin: 1rem 0 1rem;
 }
@@ -12,6 +16,8 @@
 
 .answer-container {
   margin: 0 auto;
+  padding-top: 10px;
+  background-color: #eaeced;
   max-width: 676px;
   text-align: center;
   border: 1px solid rgba(128, 128, 128, 0.18);
@@ -23,21 +29,25 @@
   .character {
     width: 40px;
     height: 40px;
-    background-color: #FFF;
+    line-height: 30px;
+    font-size: x-large;
+    background-color: #59baf1;
+    color: white;
     border: 1px solid rgba(128, 128, 128, 0.43);
+    border-radius: 3px;
     padding: 0.3rem 0.8rem;
     margin: 0.3rem 0.4rem;
     box-shadow: 1px 1px 3px 0 #ccc;
     font-weight: 600;
-    color: rgba(51, 46, 46, 0.58);
     cursor: pointer;
 
     &:hover {
-      color: rgba(0, 0, 0, 0.58);
+      background-color: #66c3f9;
+      color: rgb(1, 1, 1);
     }
   }
   .space-as-character {
-    margin: -2.09rem 0.4rem;
+    margin: -1.2rem 0.4rem;
     width: 80px;
   }
 }

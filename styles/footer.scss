@@ -1,0 +1,26 @@
+.footer {
+
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+
+  .content-padding {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  .footer-content {
+    line-height: 45px;
+  }
+  .copyright-text {
+    float: left;
+  }
+  .social-media-icons {
+    float: right;
+    font-size: x-large;
+
+    a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
