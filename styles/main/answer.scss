@@ -17,7 +17,7 @@
 .answer-container {
   margin: 0 auto;
   padding-top: 10px;
-  background-color: #eaeced;
+  background-color: #F6F6F6;
   max-width: 676px;
   text-align: center;
   border: 1px solid rgba(128, 128, 128, 0.18);
@@ -45,17 +45,29 @@
       background-color: #66c3f9;
       color: rgb(1, 1, 1);
     }
+
   }
   .space-as-character {
     margin: -1.2rem 0.4rem;
     width: 80px;
   }
+  .success-character {
+    background-color: rgb(146, 243, 102);
+    color: #1a6608
+  }
+
+  .failure-character {
+    background-color: #e60000;
+    color: #FFFFFF;
+  }
 }
 
 .success-answer {
   border: 1px solid rgb(78, 183, 76);
+  background-color: rgba(146, 243, 102, 0.1);
 }
 
 .failure-answer {
   border: 1px solid indianred;
+  background-color: rgba(205, 92, 92, 0.1);
 }

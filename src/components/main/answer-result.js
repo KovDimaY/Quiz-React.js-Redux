@@ -13,7 +13,7 @@ export default class AnswerResult extends Component {
   showCharacters(array) {
     return (
       array.map(item =>
-        <li className={`${item.value === ' ' && 'space-as-character'} inline-block character noselect`}
+        <li className={`${item.value === ' ' && 'space-as-character'} inline-block character noselect ${this.giveClassBasedOnResultToChar()}`}
             key={item.id}
             onClick={e => this.moveCharacter(item)}>
           {item.value}
@@ -22,7 +22,7 @@ export default class AnswerResult extends Component {
     )
   }
 
-  giveClassBasedOnResult() {
+  giveClassBasedOnResultToBox() {
     if (this.props.answerCondition === true) {
       return 'success-answer';
     }
@@ -32,12 +32,22 @@ export default class AnswerResult extends Component {
     return ''
   }
 
+  giveClassBasedOnResultToChar() {
+    if (this.props.answerCondition === true) {
+      return 'success-character';
+    }
+    if (this.props.answerCondition === false) {
+      return 'failure-character';
+    }
+    return ''
+  }
+
   render() {
     return (
       <div className='answer-result'>
         <ProgressMessage answerCondition={this.props.answerCondition}/>
 
-        <div className={`answer-container ${this.giveClassBasedOnResult()}`}>
+        <div className={`answer-container ${this.giveClassBasedOnResultToBox()}`}>
           <div className='characters-place'>
             <ul className='inline-list'>
               {this.showCharacters(this.props.characters)}
