@@ -9,7 +9,8 @@ import {
   INCREMENT_CORRECT_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
   RELOCATE_FROM_BOARD_TO_PROPOSITION,
-  CHECK_ANSWER
+  CHECK_ANSWER,
+  CHANGE_SCORE
  } from '../constants/questions.js';
 
 // Functions import
@@ -62,6 +63,16 @@ export function incrementCorrectCount() {
   return function(dispatch) {
     dispatch({
       type: INCREMENT_CORRECT_COUNT
+    })
+  }
+}
+
+// Increments/decrements the score by the given amount
+export function changeScore(amount) {
+  return function(dispatch) {
+    dispatch({
+      type: CHANGE_SCORE,
+      payload: amount
     })
   }
 }

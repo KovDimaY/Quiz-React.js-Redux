@@ -7,6 +7,7 @@ export default class SkipQuestion extends Component {
     this.props.removeQuestion();
     this.props.fetchQuestion();
     this.props.incrementTotalCount();
+    this.props.changeScore(-100);
   }
 
   render() {

@@ -6,7 +6,8 @@ import {
   INCREMENT_CORRECT_COUNT,
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
   RELOCATE_FROM_BOARD_TO_PROPOSITION,
-  CHECK_ANSWER
+  CHECK_ANSWER,
+  CHANGE_SCORE
  } from '../constants/questions.js';
 
 // Functions import
@@ -17,6 +18,7 @@ const INITIAL_STATE = {
   question: null,
   totalCount: 0,
   correctCount: 0,
+  score: 0,
   charsInProposition: [],
   charsOnBoard: [],
   checkAnswerCondition: null
@@ -40,6 +42,15 @@ export default function(state = INITIAL_STATE, action) {
 
     case INCREMENT_CORRECT_COUNT:
       return { ...state, correctCount: state.correctCount + 1}
+
+    case CHANGE_SCORE:
+      let newScore = state.score;
+      if (state.score + action.payload < 0) {
+        newScore = 0;
+      } else {
+        newScore += action.payload;
+      }
+      return { ...state, score: newScore}
 
     case RELOCATE_FROM_PROPOSITION_TO_BOARD:
       const filteredCharsInProposition = state.charsInProposition.filter(

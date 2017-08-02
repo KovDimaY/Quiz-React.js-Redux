@@ -7,6 +7,7 @@ export default class ContinueQuiz extends Component {
     this.props.fetchQuestion();
     this.props.incrementTotalCount();
     this.props.incrementCorrectCount();
+    this.props.changeScore(this.props.questionValue);
   }
 
   render() {

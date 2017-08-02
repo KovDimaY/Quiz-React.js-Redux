@@ -9,7 +9,8 @@ import {
   incrementCorrectCount,
   relocateToBoard,
   relocateToProposition,
-  checkAnswer
+  checkAnswer,
+  changeScore
 } from '../actions/questions';
 
 // Components import
@@ -32,7 +33,8 @@ class MainPage extends Component {
       <div className='main-page'>
           <ActivityLog
             totalCount={this.props.totalCount}
-            correctCount={this.props.correctCount}/>
+            correctCount={this.props.correctCount}
+            score={this.props.score}/>
           {this.props.question ? (
               <div className='body-question'>
                 <QuestionInfo question={this.props.question}/>
@@ -41,7 +43,8 @@ class MainPage extends Component {
                   fetchQuestion={this.props.fetchQuestion}
                   removeQuestion={this.props.removeQuestion}
                   incrementTotalCount={this.props.incrementTotalCount}
-                  answerCondition={this.props.answerCondition}/>
+                  answerCondition={this.props.answerCondition}
+                  changeScore={this.props.changeScore}/>
 
                 <AnswerResult
                   characters={this.props.charsOnBoard}
@@ -58,7 +61,9 @@ class MainPage extends Component {
                     answerCondition={this.props.answerCondition}
                     fetchQuestion={this.props.fetchQuestion}
                     incrementTotalCount={this.props.incrementTotalCount}
-                    incrementCorrectCount={this.props.incrementCorrectCount}/>
+                    incrementCorrectCount={this.props.incrementCorrectCount}
+                    changeScore={this.props.changeScore}
+                    questionValue={this.props.question.value}/>
                 )}
               </div>
             ) :
@@ -76,7 +81,8 @@ function mapStateToProps(state) {
     correctCount: state.questions.correctCount,
     charsInProposition: state.questions.charsInProposition,
     charsOnBoard: state.questions.charsOnBoard,
-    answerCondition: state.questions.checkAnswerCondition
+    answerCondition: state.questions.checkAnswerCondition,
+    score: state.questions.score
   }
 }
 
@@ -89,6 +95,7 @@ export default connect(
     incrementCorrectCount,
     relocateToBoard,
     relocateToProposition,
-    checkAnswer
+    checkAnswer,
+    changeScore
   }
 )(MainPage)

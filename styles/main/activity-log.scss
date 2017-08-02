@@ -1,17 +1,23 @@
 .activity-log {
-  padding: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 20px;
   color: dimgrey;
   text-shadow: 1px 1px 3px #c3c3c3;
 
   .correct-answers {
-    float: left;
-    padding-left: 20px;
+    text-align: center;
+    line-height: 71px;
+    vertical-align: middle;
   }
 
   .total-questions {
-    float: right;
-    padding-right: 20px;
+    text-align: center;
+    line-height: 71px;
+    vertical-align: middle;
+  }
+
+  .score {
+    text-align: center;
+    font-size: 5rem;
   }
 }

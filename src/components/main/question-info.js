@@ -13,9 +13,9 @@ export default class QuestionInfo extends Component {
     console.log(this.props)
     return (
       <div className='question-info'>
-        <h1 className="title">Question #{id}</h1>
-        <h4 className="category">Category: {category.title}</h4>
-        <h2 className="value">Value: {value}</h2>
+        <h2 className="title">Question #{id}</h2>
+        <h5 className="category">Category: {category.title}</h5>
+        <h3 className="value" title="Value of the question">{value}</h3>
         <p className="description">{question}</p>
       </div>
     )
