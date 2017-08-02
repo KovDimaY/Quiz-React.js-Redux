@@ -1,3 +1,22 @@
 .not-found-page {
-  color: yellow;
+  margin-top: 50px;
+  text-align: center;
+
+  h1 {
+    font-size: 125px;
+    font-weight: 500;
+    margin-top: -15px;
+  }
+
+  .sad-picture {
+    margin-left: -25px;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background-image: url("./../img/404.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+  }
 }
