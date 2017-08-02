@@ -7,7 +7,9 @@ import ProgressMessage from './progress-message.js'
 // This component will show data about user activity
 export default class AnswerResult extends Component {
   moveCharacter(char) {
-    this.props.relocateToProposition(char);
+    if (!this.props.answerCondition) {
+      this.props.relocateToProposition(char);
+    }
   }
 
   showCharacters(array) {

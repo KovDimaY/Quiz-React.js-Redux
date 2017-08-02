@@ -1,0 +1,43 @@
+export const CORRECT_ANSWER = [
+  'Good job!',
+  'Excellent!',
+  'Good work!',
+  'Great work!',
+  'Wonderful!',
+  'Perfect!',
+  'Just what was needed!',
+  'Fantastic!',
+  'Brilliant!',
+  'Impressive!',
+  'Great!',
+  'Well done!',
+  'You are fantastic!',
+  'Magnificent!',
+  'Bravo!',
+  'Amazing!',
+  'Simply superb!',
+  'Terrific!',
+  'Wonderful!',
+  'Incredible!'
+]
+
+export const WRONG_ANSWER = [
+  'Undeserving!',
+  'Awful job!',
+  'Unsatisfactory!',
+  'Awful work!',
+  'Bad job!',
+  'Bad work!',
+  'Terrible job!',
+  'Very bad!',
+  'Dishonorable!',
+  'Blamable!',
+  'Disappointing!',
+  'Inadequate!',
+  'This is not correct!',
+  'It is wrong!',
+  'Try again!',
+  'Unsatisfying!',
+  'Shameful!',
+  'Inappropriate!'
+]
