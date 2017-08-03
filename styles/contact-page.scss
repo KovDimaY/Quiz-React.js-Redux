@@ -1,3 +1,57 @@
 .contact-page {
-  color: red;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  border-radius: 2px;
+  margin-top: 30px;
+  padding: 30px;
+
+  .title {
+    text-shadow: 5px 1px 15px #c3c3c3;
+  }
+
+  .photo {
+    height: 300px;
+    width: 225px;
+    background-image: url("./../img/photo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    box-shadow: 5px 1px 15px #888888;
+  }
+
+  .icons {
+    margin-top: 50px;
+    text-shadow: 5px 1px 15px #c3c3c3;
+  }
+
+  .title2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 5px 1px 15px #c3c3c3;
+  }
+
+  p {
+    text-align: justify;
+    text-indent: 30px;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  label {
+    line-height: 42px;
+    vertical-align: middle;
+    margin-top: -15px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
 }

@@ -7,19 +7,19 @@ export default class ActivityLog extends Component {
     return (
       <div className='activity-log'>
         <div className='row'>
-          <div className='col-md-4'>
+          <div className='col-xs-4'>
             <div className='correct-answers'>
               Correct Answers: {this.props.correctCount}
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-xs-4'>
             <div className='score' title="Your score">
               {this.props.score}
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-xs-4'>
             <div className='total-questions'>
               Total Questions: {this.props.totalCount}
             </div>
