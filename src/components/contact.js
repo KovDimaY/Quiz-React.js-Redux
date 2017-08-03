@@ -1,7 +1,7 @@
 // Node modules import
 import React, { Component } from 'react';
 
-// About page
+// Contact page
 export default class ContactPage extends Component {
   render() {
     return (

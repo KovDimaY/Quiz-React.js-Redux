@@ -1,7 +1,7 @@
 // Node modules import
 import React, { Component } from 'react';
 
-// This component will show question to the user
+// This component will show loader while question is not ready yet
 export default class Loader extends Component {
   render() {
     return (

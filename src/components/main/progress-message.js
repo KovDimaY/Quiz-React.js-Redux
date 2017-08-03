@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // Import constants with messages
 import { CORRECT_ANSWER, WRONG_ANSWER } from '../../constants/phrases.js'
 
-// This component will show question to the user
+// This component will show a message depending on the result of the answer
 export default class ProgressMessage extends Component {
 
   correctAnswerMessage() {

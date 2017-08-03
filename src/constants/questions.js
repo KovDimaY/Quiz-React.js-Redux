@@ -8,5 +8,5 @@ export const RELOCATE_FROM_BOARD_TO_PROPOSITION = 'relocate_from_board_to_propos
 export const CHECK_ANSWER = 'check_answer';
 export const CHANGE_SCORE = 'change_score';
 
-
+// Parameters
 export const SKIP_PENALTY = -100;

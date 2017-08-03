@@ -1,7 +1,7 @@
 // Node modules import
 import React, { Component } from 'react';
 
-// This component will show data about user activity
+// This component will show data about user activity (score and statistics)
 export default class ActivityLog extends Component {
   render() {
     return (

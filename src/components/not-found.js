@@ -15,7 +15,9 @@ export default class NotFound extends Component {
             <div className='text'>
               <h1>404</h1>
               <h2>Page not found</h2>
-              <p>If you see this page, probably you have typed the adress incorrectly or you are just testing my 404 page :)</p>
+              <p>If you see this page, probably you have typed the adress
+                incorrectly or you are just testing my 404 page :)
+              </p>
               <h3>Have a nice day!</h3>
             </div>
           </div>

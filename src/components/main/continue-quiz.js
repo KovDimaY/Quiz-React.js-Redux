@@ -1,7 +1,7 @@
 // Node modules import
 import React, { Component } from 'react';
 
-// This component will show question to the user
+// This component will show a button to continue quiz after correct answer
 export default class ContinueQuiz extends Component {
   nextQuestion() {
     this.props.fetchQuestion();

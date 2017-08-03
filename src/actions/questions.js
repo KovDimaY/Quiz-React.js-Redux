@@ -21,6 +21,7 @@ export function fetchQuestion() {
   return function(dispatch) {
     return axios.get('http://jservice.io/api/random')
       .then(function(response) {
+        // TODO: maybe delete this line
         console.log(response.data[0].answer)
         const arrayOfCharacters = stringToArray(response.data[0].answer);
         const shuffledArray = shuffleArray(arrayOfCharacters);

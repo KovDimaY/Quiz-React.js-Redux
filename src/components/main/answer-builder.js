@@ -1,7 +1,7 @@
 // Node modules import
 import React, { Component } from 'react';
 
-// This component will show data about user activity
+// This component will show the characters to build the answer
 export default class AnswerBuilder extends Component {
   moveCharacter(char) {
     this.props.relocateToBoard(char);
@@ -11,7 +11,8 @@ export default class AnswerBuilder extends Component {
   showCharacters(array) {
     return (
       array.map(item =>
-        <li className={`${item.value === ' ' && 'space-as-character'} inline-block character noselect`}
+        <li className={`${item.value === ' ' && 'space-as-character'}
+                        inline-block character noselect`}
             key={item.id}
             onClick={e => this.moveCharacter(item)}>
           {item.value}

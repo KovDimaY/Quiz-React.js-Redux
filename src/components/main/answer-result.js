@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // Components import
 import ProgressMessage from './progress-message.js'
 
-// This component will show data about user activity
+// This component will show area to construct the final answer
 export default class AnswerResult extends Component {
   moveCharacter(char) {
     if (!this.props.answerCondition) {
@@ -15,7 +15,9 @@ export default class AnswerResult extends Component {
   showCharacters(array) {
     return (
       array.map(item =>
-        <li className={`${item.value === ' ' && 'space-as-character'} inline-block character noselect ${this.giveClassBasedOnResultToChar()}`}
+        <li className={`${item.value === ' ' && 'space-as-character'}
+                        inline-block character noselect
+                        ${this.giveClassBasedOnResultToChar()}`}
             key={item.id}
             onClick={e => this.moveCharacter(item)}>
           {item.value}

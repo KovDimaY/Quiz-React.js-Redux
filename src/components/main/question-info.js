@@ -1,7 +1,7 @@
 // Node modules import
 import React, { Component } from 'react';
 
-// This component will show question to the user
+// This component will show question to the user (+ id, category and value)
 export default class QuestionInfo extends Component {
   render() {
     const {
@@ -10,7 +10,6 @@ export default class QuestionInfo extends Component {
       category,
       value
     } = this.props.question
-    console.log(this.props)
     return (
       <div className='question-info'>
         <h2 className="title">Question #{id}</h2>
