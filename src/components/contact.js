@@ -7,7 +7,7 @@ export default class ContactPage extends Component {
     return (
       <div className='contact-page'>
 
-        <h1 className='title'>Contact me</h1>
+        <h1 className='title'>Find me on social media</h1>
         <div className='row'>
           <div className='col-xs-5'>
             <div className='photo'></div>
@@ -116,14 +116,15 @@ export default class ContactPage extends Component {
         </p>
 
         <p>
-          But my heart has always belonged to the programming. An especially I
+          But my heart has always belonged to the programming. And especially I
           wanted to develop computer games. So at the last year in the university,
           I started to study this field from all the sides: game design, programming
           and testing. And after finishing the university I got a job at Enixan
-          Entertainment as a game designer of the new genre direction in the company.
+          Entertainment as a game designer of a new genre direction in the company.
           Our team successfully developed a game and deployed it on production,
-          but unfortunately, just at this moment, I had to leave the
-          company because of the relocation to Spain.
+          but unfortunately, just after this moment, I had to leave the
+          company because of the relocation to Spain. But this game is alive,
+          people still playing it and the game even had several big updates from that time.
         </p>
 
         <p>
@@ -142,7 +143,7 @@ export default class ContactPage extends Component {
           one of such projects that I have done at my free time just to learn
           something new about topics that I am working with. I hope this passion
           will never leave me during my career of a programmer.
-          Because I feel like I finally found my place in life.
+          Because I feel like I finally found my place in the life.
         </p>
 
 
