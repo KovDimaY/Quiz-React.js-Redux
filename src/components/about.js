@@ -90,18 +90,6 @@ export default class AboutPage extends Component {
           For styling was used preprocessor SASS.
         </p>
 
-        <h3 className=''>Aknowledgments</h3>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
         <div className='row'>
           <div className='col-xs-6'>
             <div className='logo back'>
@@ -115,6 +103,16 @@ export default class AboutPage extends Component {
           </div>
         </div>
 
+        <h1 className='title2'>Aknowledgments</h1>
+
+        <p>
+          I created the base of this project following a tutorial
+          of <a target="_blank" href="https://github.com/AlexPurhalo">Alex Purhalo</a>.
+          His video lessons helped me a lot to understand how redux works and
+          to put together all my knowledge about node, express, react, sass
+          and work with APIs. I want to say thanks to him and to wish him a
+          big success in his career.
+        </p>
 
       </div>
     )
