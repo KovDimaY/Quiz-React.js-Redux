@@ -42,29 +42,78 @@ export default class AboutPage extends Component {
         <h1 className='title2'>Technical side</h1>
 
         <p>
-          I was born on May 20, 1992, in Verchniodniprovsk, Ukraine. Almost
-          all my relatives were teachers at that time. My father was teacher
-          of arts in a kinder garden, mother and her father were teachers of
-          music, two grannies were teachers of math and English.
+          This project was created to practice my knowledge about react,
+          node and express. But more importantly, I wanted to learn and
+          understand better the principles of redux with its actions and
+          reducers. Also, this is my first full stack project, that I
+          am going to deploy on production (I think it will
+          be <a target="_blank" href="https://www.heroku.com/">Heroku</a>, but
+          I am not sure yet). So if you read this,
+          I am glad that everything finally happened! :D
         </p>
 
-        <h1 className='title'>Rules of the "game"</h1>
+        <h3>API</h3>
 
         <p>
-          I was born on May 20, 1992, in Verchniodniprovsk, Ukraine. Almost
-          all my relatives were teachers at that time. My father was teacher
-          of arts in a kinder garden, mother and her father were teachers of
-          music, two grannies were teachers of math and English.
+          To get the question I am using the API of
+          the <a target="_blank" href="http://jservice.io/">jService</a>. It is
+          about 156,800 Trivia Questions on different topics and of different
+          complexity levels. For the moment I am using only <b>/random</b> part,
+          that gives me one random question from random category and of random
+          difficulty. But I had an idea to create a possibility for
+          the user to choose a category (from 4 random options for example)
+          first and then it will give the question from this category. Note,
+          that all the questions created by different people, with different
+          intelligence, mood, knowledge, tidiness etc. So sometimes, questions
+          and answers look pretty strange. But in general, it is really fun
+          at least for some little time :)
         </p>
 
-        <h1 className='title'>Rules of the "game"</h1>
+        <h3>Backend</h3>
 
         <p>
-          I was born on May 20, 1992, in Verchniodniprovsk, Ukraine. Almost
-          all my relatives were teachers at that time. My father was teacher
-          of arts in a kinder garden, mother and her father were teachers of
-          music, two grannies were teachers of math and English.
+          Backend part of this project was created with Node.js and web
+          application framework Express. It does not have any complex
+          computations, validations or databases, so backend part is
+          pretty simple in this project. Even routing handles more by React
+          Router than by backend.
         </p>
+
+        <h3 className=''>Frontend</h3>
+
+        <p>
+          This part was created using a combination of Redux and React.
+          Redux is a predictable state container for JavaScript app and React
+          is one of the most popular frameworks nowadays to create front end.
+          Also to practice possibility of using different pages of the application
+          was used React Router with a handling of 404 error page.
+          For styling was used preprocessor SASS.
+        </p>
+
+        <h3 className=''>Aknowledgments</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <div className='row'>
+          <div className='col-xs-6'>
+            <div className='logo back'>
+
+            </div>
+          </div>
+          <div className='col-xs-6'>
+            <div className='logo front'>
+
+            </div>
+          </div>
+        </div>
 
 
       </div>

@@ -15,6 +15,26 @@
     margin-top: 40px;
   }
 
+  .logo {
+    height: 100px;
+    width: 178px;
+    margin: auto;
+    margin-top: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    box-shadow: 5px 1px 15px #888888;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+  }
+
+  .back {
+    background-image: url("./../img/node-express.png");
+  }
+  .front {
+    background-image: url("./../img/react-redux.jpg");
+  }
+
   p {
     text-align: justify;
     text-indent: 30px;
@@ -23,6 +43,10 @@
   h1 {
     text-align: center;
     margin-bottom: 30px;
+  }
+
+  a {
+    cursor: pointer;
   }
 
 
