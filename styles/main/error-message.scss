@@ -1,73 +1,75 @@
-.error-background {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+.error-message {
+  .error-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-}
+  }
 
-.close {
-  position: absolute;
-  font-size: x-large;
-  left: 93%;
-  top: 5%;
-  cursor: pointer;
-}
+  .close {
+    position: absolute;
+    font-size: x-large;
+    left: 93%;
+    top: 5%;
+    cursor: pointer;
+  }
 
-.error-window {
-  background-color: #f9f9f9;
-  border: 1px solid rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 30px #1a1a1a;
-  border-radius: 2px;
-  padding: 30px;
-  text-align: center;
-  height: 70%;
-  width: 60%;
-  min-width: 600px;
-  position: absolute;
-  top: 10%;
-  left: 20%;
-  cursor: auto;
+  .error-window {
+    background-color: #f9f9f9;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px #1a1a1a;
+    border-radius: 2px;
+    padding: 30px;
+    text-align: center;
+    height: 70%;
+    width: 60%;
+    min-width: 600px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    cursor: auto;
 
-}
+  }
 
-.picture {
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  box-shadow: 5px 1px 15px #888888;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  margin: auto;
-  margin-bottom: 50px;
-}
+  .picture {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    box-shadow: 5px 1px 15px #888888;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: auto;
+    margin-bottom: 50px;
+  }
 
-.tip-image-chrome {
-  height: 175px;
-  width: 490px;
+  .tip-image-chrome {
+    height: 175px;
+    width: 490px;
 
-  margin-top: 20px;
-  background-image: url("./../img/redirect.png");
-}
+    margin-top: 20px;
+    background-image: url("./../img/redirect.png");
+  }
 
-.tip-image-2 {
-  height: 100px;
-  width: 178px;
-  margin-top: 20px;
-}
+  .tip-image-2 {
+    height: 100px;
+    width: 178px;
+    margin-top: 20px;
+  }
 
-p {
-  text-align: justify;
-  text-indent: 30px;
-}
+  p {
+    text-align: justify;
+    text-indent: 30px;
+  }
 
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
-h4 {
-  margin-top: 30px;
+  h4 {
+    margin-top: 30px;
+  }
 }
