@@ -71,7 +71,9 @@ class MainPage extends Component {
             ) :
               <Loader />
           }
-          <ErrorMessage />
+          <ErrorMessage
+            showError={this.props.showError}
+            hideError={this.props.hideError}/>
       </div>
     )
   }

@@ -21,10 +21,9 @@ import { stringToArray, shuffleArray } from '../helpers/functions.js'
 // Receives a random question
 export function fetchQuestion() {
   return function(dispatch) {
-    return axios.get('http://jservice.io/api/random')
+    return axios.get('https://jservice.io/api/random')
       .then(function(response) {
         // TODO: maybe delete this line
-        console.log(response.data[0].answer)
         const arrayOfCharacters = stringToArray(response.data[0].answer);
         const shuffledArray = shuffleArray(arrayOfCharacters);
         const data = {
@@ -40,7 +39,6 @@ export function fetchQuestion() {
           payload: data
         })
       }, function(error) {
-        console.log(error);
         dispatch({
           type: SHOW_ERROR
         })
