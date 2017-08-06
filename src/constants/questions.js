@@ -7,6 +7,9 @@ export const RELOCATE_FROM_PROPOSITION_TO_BOARD = 'relocate_from_proposition_to_
 export const RELOCATE_FROM_BOARD_TO_PROPOSITION = 'relocate_from_board_to_proposition';
 export const CHECK_ANSWER = 'check_answer';
 export const CHANGE_SCORE = 'change_score';
+export const SHOW_ERROR = 'show_error';
+export const HIDE_ERROR = 'hide_error';
+
 
 // Parameters
 export const SKIP_PENALTY = -100;

@@ -10,13 +10,15 @@ import {
   relocateToBoard,
   relocateToProposition,
   checkAnswer,
-  changeScore
+  changeScore,
+  hideError
 } from '../actions/questions';
 
 // Components import
 import ActivityLog from './main/activity-log.js'
 import QuestionInfo from './main/question-info.js'
 import Loader from './main/loader.js'
+import ErrorMessage from './main/error-message.js'
 import SkipQuestion from './main/skip-question.js'
 import AnswerBuilder from './main/answer-builder.js'
 import AnswerResult from './main/answer-result.js'
@@ -69,6 +71,7 @@ class MainPage extends Component {
             ) :
               <Loader />
           }
+          <ErrorMessage />
       </div>
     )
   }
@@ -82,7 +85,8 @@ function mapStateToProps(state) {
     charsInProposition: state.questions.charsInProposition,
     charsOnBoard: state.questions.charsOnBoard,
     answerCondition: state.questions.checkAnswerCondition,
-    score: state.questions.score
+    score: state.questions.score,
+    showError: state.questions.showError
   }
 }
 
@@ -96,6 +100,7 @@ export default connect(
     relocateToBoard,
     relocateToProposition,
     checkAnswer,
-    changeScore
+    changeScore,
+    hideError
   }
 )(MainPage)

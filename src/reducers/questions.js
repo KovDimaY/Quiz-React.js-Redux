@@ -7,7 +7,9 @@ import {
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
   RELOCATE_FROM_BOARD_TO_PROPOSITION,
   CHECK_ANSWER,
-  CHANGE_SCORE
+  CHANGE_SCORE,
+  SHOW_ERROR,
+  HIDE_ERROR
  } from '../constants/questions.js';
 
 // Functions import
@@ -21,7 +23,8 @@ const INITIAL_STATE = {
   score: 0,
   charsInProposition: [],
   charsOnBoard: [],
-  checkAnswerCondition: null
+  checkAnswerCondition: null,
+  showError: false
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -33,6 +36,12 @@ export default function(state = INITIAL_STATE, action) {
         charsOnBoard: [],
         checkAnswerCondition: null
       }
+
+    case SHOW_ERROR:
+      return { ...state, showError: true}
+
+    case HIDE_ERROR:
+      return { ...state, showError: false}
 
     case DELETE_CURRENT_QUESTION:
       return { ...state, question: null}

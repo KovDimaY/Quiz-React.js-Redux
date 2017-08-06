@@ -10,7 +10,9 @@ import {
   RELOCATE_FROM_PROPOSITION_TO_BOARD,
   RELOCATE_FROM_BOARD_TO_PROPOSITION,
   CHECK_ANSWER,
-  CHANGE_SCORE
+  CHANGE_SCORE,
+  SHOW_ERROR,
+  HIDE_ERROR
  } from '../constants/questions.js';
 
 // Functions import
@@ -37,7 +39,21 @@ export function fetchQuestion() {
           type: FETCH_QUESTION,
           payload: data
         })
+      }, function(error) {
+        console.log(error);
+        dispatch({
+          type: SHOW_ERROR
+        })
       })
+  }
+}
+
+// Hides an error and allowes to continue use the application
+export function hideError() {
+  return function(dispatch) {
+    dispatch({
+      type: HIDE_ERROR
+    })
   }
 }
 
