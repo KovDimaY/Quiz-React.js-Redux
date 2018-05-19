@@ -1,6 +1,6 @@
 // Node modules import
 import React from 'react';
-import { Router, IndexRoute } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 
 // Components import
 import App from './components/app';
@@ -11,10 +11,10 @@ import NotFound from './components/not-found';
 
 // Routes definition
 export default (
-  <Router path='/' component={App}>
+  <Route path='/' component={App}>
     <IndexRoute component={Main} />
-    <Router path='/about' component={About} />
-    <Router path='/contact' component={Contact} />
-    <Router path='*' component={NotFound} />
-  </Router>
+    <Route path='/about' component={About} />
+    <Route path='/contact' component={Contact} />
+    <Route path='*' component={NotFound} />
+  </Route>
 );
